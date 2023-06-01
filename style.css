@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;1,100;1,300;1,500&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+    
+
+    
+.jumbotron {
+  position: relative;
+  padding: 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/hero.jpg'); /* Replace with the path to your high-quality banner image */
+  background-size: cover;
+}
+
+.text-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.jumbotron h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 1.5rem;
+}
+
+
+
+    
+
+
+
+   /* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer h5 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  display: inline-block;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: #17a2b8;
+  text-decoration: none;
+}
+
+.footer .social-icons {
+  margin-bottom: 20px;
+}
+
+.footer .social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  font-size: 18px;
+  margin-right: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  background-color: #17a2b8;
+}
+
+.footer .contact-info {
+  font-size: 16px;.pr
+  margin-bottom: 20px;
+}
+
+.footer .contact-info i {
+  margin-right: 10px;
+}
+
+    
+    
+    section{
+      padding: 4rem 0 3rem;
+  }
+  ."col-lg-3 col-md-6 col-sm-12{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,auto));
+    gap: 1.5rem;
+  }
+  
+  .product-box.hover:hover {
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .product-box {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    transition: max-height 0.3s ease;
+  }
+  
+  .product-image {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .product-image:hover {
+    max-height: 300px; /* Set the height to accommodate the details */
+  }
+  
+  .product-image .product-img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-image:hover .product-img {
+    transform: scale(1.1); /* Increase the size of the image on hover */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .product-image:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay-content {
+    text-align: center;
+    color: #fff;
+  }
+  
+  .product-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .product-image:hover ~ .product-details {
+    max-height: 300px; /* Set the height to accommodate the details */
+  }
+  
+  h2.product-title{
+    font-size: 20px;
+  }
+  span.price{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: ;
+  }
+
+  .specs h3{
+    font-size: 14px;
+  }
+  .cart-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .product-box:hover .cart-container {
+    opacity: 1;
+  }
+  
+  .cart-container {
+    position: relative;
+  }
+  
+  .cart-container .cart-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Prevent the text from interfering with clicks */
+  }
+  .add-cart {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  } 
+  
+  
+  .product-box {
+    animation: fadeInUp 0.5s ease-out;
+  }
+
+
+  .jumbotron {
+    animation: fadeIn 1s ease-out;
+  }
+
+  /* Define keyframes for animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .row shop-content{
+    
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+      gap: 1.5rem;
+      margin-top: 4rem;
+    
+  }
+  @media (max-width: 767px) {
+    .navbar-nav.ms-auto {
+      display: none;
+    }
+  
+    .navbar-nav.collapsed {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+    }
+  
+    .navbar-nav.collapsed li {
+      margin-bottom: 10px;
+    }
+  
+    .navbar-nav.collapsed .nav-link {
+      text-align: center;
+    }
+  }
+  
+
+  .modal-dialog {
+    max-width: 90%;
+  }
+
+  .modal-content {
+    width: 100%;
+  }
+
+
+  @media (max-width: 576px) {
+    .modal-dialog {
+      margin: 10px;
+      max-width: none;
+      width: 100%;
+    }
+    }
+   @media (min-width: 577px) and (max-width: 768px) {
+      .modal-dialog {
+        max-width: 80%;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 992px) {
+      .modal-dialog {
+        max-width: 70%;
+      }
+    }
+
+    @media (min-width: 993px) and (max-width: 1200px) {
+      .modal-dialog {
+        max-width: 60%;
+      }
+    }
+
+    @media (min-width: 1201px) {
+      .modal-dialog {
+        max-width: 50%;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .modal-body {
+        padding: 10px;
+      }
+    }
+    
+    @media (min-width: 577px) and (max-width: 768px) {
+      .modal-body {
+        padding: 20px;
+      }
+    }
+    
+    @media (min-width: 769px) and (max-width: 992px) {
+      .modal-body {
+        padding: 30px;
+      }
+    }
+    
+    @media (min-width: 993px) and (max-width: 1200px) {
+      .modal-body {
+        padding: 40px;
+      }
+    }
+    
+    @media (min-width: 1201px) {
+      .modal-body {
+        padding: 50px;
+      }
+    }
+    

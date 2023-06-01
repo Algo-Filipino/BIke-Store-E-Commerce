@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Head content -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Road Bike</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<script src="js/jquery2.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="path/to/bootstrap.min.css">
+<script src="path/to/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+        <!-- Navigation -->
+  <header class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Bike Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="bikes.html">Bikes</a></li>
+              <li><a class="dropdown-item" href="accessories.html">Accessories</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
+              <i class="fas fa-shopping-cart"></i> 
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">
+              <i class="fas fa-user"></i> 
+              Login
+            </a>
+          </li>
+        </ul>
+      </div>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-primary" type="submit">
+          <i class="fas fa-search"></i> 
+        </button>
+      </form>
+    </div>
+  </header>
+        
+    <!-- Navigation content -->
+ <!-- Main content -->
+ <section class="shop container">
+
+  
+    <div class="row shop-content">
+      <h2 class="section-title" style="text-align: center; margin-bottom: 2rem;" >Road Bike Products</h2>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="product-box">
+          <div class="product-image">
+            <img src="images/rb-PARIS-RIVAL-B102-ORANGE.jpg" alt="" class="product-img">
+            <div class="overlay">
+              <a href="#" onclick="addToCart(event, 'rb1')" class="btn btn-primary btn-buy">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </a>
+            </div>
+          </div>
+          <div class="product-details">
+            <h2 class="product-title">PINARELLO PARIS RIVAL AXS BIKE</h2>
+            <span class="price">₱262,750.00</span>
+            <div class="specs">
+              <h3>Specifications:</h3>
+              <ul>
+                <li>Color:  B102 Orange</li>
+                <li>Frame Size: 60cm</li>
+                <li>SKU: 10135391</li>
+                
+              </ul>
+            </div>
+            <div class="ratings" style="color: yellow; font-size: 30px;">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+      
+      
+      
+  
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="product-box">
+          <div class="product-image">
+            <img src="images/rb-3T-STRADA-ICR-RIVAL-AXS-2X-RED-BLACK.jpg" alt="" class="product-img">
+            <div class="overlay">
+              <a href="#" onclick="addToCart(event, 'rb2')" class="btn btn-primary btn-buy">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </a>
+            </div>
+          </div>
+          <div class="product-details">
+            <h2 class="product-title">3T STRADA ICR RIVAL AXS 2X BIKE</h2>
+            <span class="price" style="text-align: center;">₱274,950.00</span>
+            <div class="specs">
+              <h3>Specifications:</h3>
+              <ul>
+                <li>Color:
+                  Red / Black</li>
+                <li>Color:
+                  Red / Black
+                  Frame Size:
+                  51cm / 54cm / 56cm / 58cm</li>
+                <li>SKU: 10144951</li>
+              </ul>
+            </div>
+            <div class="ratings" style="color: yellow; font-size: 30px;">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+  
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="product-box">
+          <div class="product-image">
+            <img src="images/rb-3T-STRADA-ICR-FORCE-CHROME.jpg" alt="" class="product-img">
+            <div class="overlay">
+              <a href="#" onclick="addToCart(event, 'rb3')" class="btn btn-primary btn-buy">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </a>
+            </div>
+          </div>
+          <div class="product-details">
+            <h2 class="product-title">3T STRADA ICR FORCE CHROME</h2>
+            <span class="price">₱309,950.00</span>
+            <div class="specs">
+              <h3>Specifications:</h3>
+              <ul>
+                <li>Color:
+                  Chrome </li>
+                <li>Frame Size:
+                  51cm / 54cm</li>
+                <li>SKU: 10144957</li>
+              </ul>
+            </div>
+            <div class="ratings" style="color: yellow; font-size: 30px;">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="product-box">
+          <div class="product-image">
+            <img src="images/rb-3T-STRADA-ICR-RED-AXS-1X-NAVY-BLACK.jpg" alt="" class="product-img">
+            <div class="overlay">
+              <a href="#" onclick="addToCart(event, 'rb4')" class="btn btn-primary btn-buy">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </a>
+            </div>
+          </div>
+          <div class="product-details">
+            <h2 class="product-title">3T STRADA ICR RED AXS 1X BIKE</h2>
+            <span class="price">₱382,449.00</span>
+            <div class="specs">
+              <h3>Specifications:</h3>
+              <ul>
+                <li>Color:
+                  Navy / Black</li>
+                <li>Color:
+                  Navy / Black
+                  Frame Size:
+                  51cm54cm</li>
+                <li>SKU: 10149436</li>
+              </ul>
+            </div>
+            <div class="ratings" style="color: yellow; font-size: 30px;">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="product-box">
+          <div class="product-image">
+            <img src="images/rb-Colnago_Arabesque_RADK.jpg" alt="" class="product-img">
+            <div class="overlay">
+              <a href="#" onclick="addToCart(event, 'rb5')" class="btn btn-primary btn-buy">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </a>
+            </div>
+          </div>
+          <div class="product-details">
+            <h2 class="product-title">COLNAGO ARABESQUE</h2>
+            <span class="price">₱196497.50</span>
+            <div class="specs">
+              <h3>Specifications:</h3>
+              <ul>
+                <li>Color:
+                  RADK / RALB / RARD / RAWH</li>
+                <li>Color:
+                  RADKRALBRARDRAWH
+                  Frame Size:
+                  49cm / 50cm / 51cm / 52cm / 53cm / 54cm /55cm / 56cm</li>
+                <li>SKU: 10062603</li>
+              </ul>
+            </div>
+            <div class="ratings" style="color: yellow; font-size: 30px;">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+  
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="product-box">
+          <div class="product-image">
+            <img src="images/rb-Colnago-E64-BMGR_1.jpg" alt="" class="product-img">
+            <div class="overlay">
+              <a href="#" onclick="addToCart(event, 'rb6')" class="btn btn-primary btn-buy">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </a>
+            </div>
+          </div>
+          <div class="product-details">
+            <h2 class="product-title">COLNAGO E-64 ULTEGRA DI2 BIKE</h2>
+            <span class="price">₱407,997.45 </span>
+            <div class="specs">
+              <h3>Specifications:</h3>
+              <ul>
+                <li>Color:
+                  BMGRB / MOR</li>
+                <li>
+                  Frame Size:
+                  43s / 46s / 49s</li>
+                <li>SKU: 10110063</li>
+              </ul>
+            </div>
+            <div class="ratings" style="color: yellow; font-size: 30px;">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+  
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="product-box">
+          <div class="product-image">
+            <img src="images/rb-COLNAGO-V3-MKRD.jpg" alt="" class="product-img">
+            <div class="overlay">
+              <a href="#" onclick="addToCart(event, 'rb7')" class="btn btn-primary btn-buy">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </a>
+            </div>
+          </div>
+          <div class="product-details">
+            <h2 class="product-title">COLNAGO V3 DISC RIVAL AXS BIKE</h2>
+            <span class="price">₱244,997,55</span>
+            <div class="specs">
+              <h3>Specifications:</h3>
+              <ul>
+                <li>Color:
+                  MKRD / MKGR</li>
+                <li>Frame Size: 52cm</li>
+                <li>SKU: 10140492</li>
+              </ul>
+            </div>
+            <div class="ratings" style="color: yellow; font-size: 30px;">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="product-box">
+          <div class="product-image">
+            <img src="images/rb-COLNAGO-C68-TI-KAIZEN-PRO-BLACK.jpg" alt="" class="product-img">
+            <div class="overlay">
+              <a href="#" onclick="addToCart(event, 'rb8')" class="btn btn-primary btn-buy">
+                <i class="fas fa-shopping-cart"></i> Add to Cart
+              </a>
+            </div>
+          </div>
+          <div class="product-details">
+            <h2 class="product-title">COLNAGO C68 TI DISC KAIZEN PRO BLACK BIKE</h2>
+            <span class="price">₱1,170,450</span>
+            <div class="specs">
+              <h3>Specifications:</h3>
+              <ul>
+                <li>Color:HTBK</li>
+                <li>Frame Size: 48.5cm</li>
+                <li>SKU: 10144472</li>
+              </ul>
+            </div>
+            <div class="ratings" style="color: yellow; font-size: 30px;">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+  
+      
+    </div>
+  </section>
+
+
+
+
+  <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="closeButton"></button>
+        </div>
+        <div class="modal-body">
+          <div id="cartContent">
+            <div class="cart-total">
+              Total: ₱<span id="cartTotal">0.00</span>
+            </div>
+              
+             
+          </div>
+          <div class="modal-footer">
+
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close" id="conshop">Continue Shopping</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Bikes</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Connect With Us</h5>
+        <ul class="list-unstyled">
+          <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Contact Info</h5>
+        <ul class="list-unstyled">
+          <li><i class="fas fa-phone"></i> +1 123-456-7890</li>
+          <li><i class="fas fa-envelope"></i> info@bikestore.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Philippines</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    &copy; 2023 Bike Store. All rights reserved.<br>
+    <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="contact.html">Contact Us</a>
+  </div>
+</footer>
+<script>
+  document.getElementById('closeButton').addEventListener('click', function() {
+    location.reload(); // Reload the page
+  });
+
+  document.getElementById('conshop').addEventListener('click', function() {
+    location.reload(); // Reload the page
+  });
+</script>
+   <script>
+    // Retrieve stored cart items from local storage, or initialize an empty array
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  
+    // Function to handle adding items to the cart
+    function addToCart(event, productId) {
+      event.preventDefault();
+  
+      // Check if the product is already in the cart
+      const existingItem = cartItems.find(item => item.id === productId);
+  
+      if (existingItem) {
+        // If the product is already in the cart, increase the quantity
+        existingItem.quantity++;
+      } else {
+        // If the product is not in the cart, add it as a new item
+        const newItem = {
+          id: productId,
+          quantity: 1
+        };
+        cartItems.push(newItem);
+      }
+  
+      // Store the updated cart items in local storage
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  
+      // Optional: Show a success message or perform any other desired actions
+      alert('Item added to cart!');
+      
+      // Update the cart badge
+      updateCartBadge();
+    }
+  
+    // Function to display the number of items in the cart
+    function updateCartBadge() {
+      const cartBadge = document.getElementById('cartBadge');
+      cartBadge.textContent = cartItems.length;
+    }
+  
+    // Call the function to update the cart badge when the page loads
+    updateCartBadge();
+  </script>
+   <script>
+    var cartModal = document.getElementById('cartModal');
+    cartModal.addEventListener('show.bs.modal', function () {
+      var cartContent = document.getElementById('cartContent');
+      cartContent.innerHTML = '<iframe src="cart.html" style="width: 100%; height: 400px; border: none;"></iframe>';
+    });
+    </script>
+
+    <script>
+      $(document).ready(function() {
+  // When Brand 1 is clicked
+  $('#brand1').click(function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    // Modify the display of the desired elements
+    $('.product-box').hide(); // Hide all product boxes
+    $('.brand1-products').show(); // Show the specific products for Brand 1
+  });
+});
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bike Store</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <script src="js/jquery2.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="path/to/bootstrap.min.css">
+  <script src="path/to/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      width: 400px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      width: 100%;
+    }
+
+    p {
+      text-align: center;
+      margin-top: 20px;
+      color: #666;
+    }
+
+    p a {
+      color: #6b8fd0;
+      text-decoration: none;
+    }
+
+    p a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+
+<div class="container mt-4">
+  <div class="form-container">
+    <h1>Sign Up</h1>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-group">
+          <input type="password" class="form-control" id="password" placeholder="Enter your password" oninput="checkPasswordStrength(this.value)">
+          <div class="input-group-append">
+            <span class="input-group-text" id="password-toggle" style="cursor: pointer;" onclick="togglePasswordVisibility()">Show</span>
+          </div>
+        </div>
+        <small id="password-strength" class="form-text"></small>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password">
+      </div>
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+       <p>Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+</div>
+
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script>
+function signUp() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var confirmPassword = document.getElementById("confirm-password").value;
+
+  // Perform validation or sign-up logic here
+  if (password !== confirmPassword) {
+    alert("Passwords do not match. Please try again.");
+  } else {
+    // Perform sign-up logic and redirect to another page
+    alert("Sign up successful!");
+    window.location.href = "login.html";
+  }
+}
+
+function togglePasswordVisibility() {
+  var passwordInput = document.getElementById("password");
+  var passwordToggle = document.getElementById("password-toggle");
+
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    passwordToggle.textContent = "Hide";
+  } else {
+    passwordInput.type = "password";
+    passwordToggle.textContent = "Show";
+  }
+}
+
+function checkPasswordStrength() {
+  var password = document.getElementById("password").value;
+  var passwordStrength = document.getElementById("password-strength");
+
+  // Check password strength and provide feedback
+  if (password.length === 0) {
+    passwordStrength.textContent = "";
+  } else if (password.length < 6) {
+    passwordStrength.textContent = "Password is too weak.";
+    passwordStrength.style.color = "red";
+  } else if (password.length < 8) {
+    passwordStrength.textContent = "Password is weak.";
+    passwordStrength.style.color = "orange";
+  } else if (password.search(/[a-z]/) === -1 || password.search(/[A-Z]/) === -1) {
+    passwordStrength.textContent = "Password should include both uppercase and lowercase letters.";
+    passwordStrength.style.color = "orange";
+  } else {
+    passwordStrength.textContent = "Password is strong.";
+    passwordStrength.style.color = "green";
+  }
+}
+
+// Add event listeners to the form elements
+var signUpForm = document.querySelector("form");
+signUpForm.addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent the form from submitting
+  signUp(); // Call the sign-up function
+});
+
+var passwordInput = document.getElementById("password");
+passwordInput.addEventListener("input", checkPasswordStrength);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<script src="js/jquery2.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="path/to/bootstrap.min.css">
+<script src="path/to/bootstrap.bundle.min.js"></script>
+<style>
+  body {
+    background-color: #f2f2f2;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .form-container {
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .form-group label {
+    font-weight: bold;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+  }
+
+  p a {
+    color: #6b8fd0;
+    text-decoration: none;
+  }
+
+  p a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+
+
+
+
+  <div class="container mt-4">
+    <div class="form-container">
+      <h1>Login</h1>
+      <form>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" id="username" placeholder="Enter your username">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-group">
+            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+            <div class="input-group-text" id="password-toggle" style="cursor: pointer;"
+            onclick="togglePasswordVisibility()">
+              
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="login()">Login</button>
+
+        <p class="text-center mt-3">Don't have an account? <a href="signup.html">Create Account</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script>
+    function togglePasswordVisibility() {
+      var passwordInput = document.getElementById("password");
+      var passwordToggle = document.getElementById("password-toggle");
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+ ;
+      } else {
+        passwordInput.type = "password";
+   
+      }
+    }
+    function login() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    if (username === "admin" && password === "password") {
+      alert("Login successful!");
+      redirectToIndex(); // Call the redirect function
+    } else if (username === "estreramartin037@gmail.com" && password === "Martin1234567!") {
+      alert("Login successful!");
+      redirectToIndex(); // Call the redirect function
+    } else {
+      alert("Invalid username or password. Please try again.");
+    }
+  }
+    
+
+    // Function to redirect to index.html
+    function redirectToIndex() {
+      window.location.href = "index.html";
+    }
+
+    // Add an event listener to the form submit button
+    var loginForm = document.querySelector("form");
+    loginForm.addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the form from submitting
+      login(); // Call the login function
+    });
+  </script>
+</body>
+
+</html>
+
+
+
+
+
+
+  </script>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+</html>    
