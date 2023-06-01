@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+
 
 <head>
   <!-- Head content -->
@@ -18,12 +18,17 @@
 <script src="path/to/bootstrap.bundle.min.js"></script>
 
 </head>
-
+<style>
+  .card-img-top {
+    height: 250px;
+    object-fit: cover;
+  }
+</style>
 <body>
   <!-- Navigation -->
   <header class="navbar navbar-expand-lg navbar-light bg-light sticky-navbar" style=" position: sticky;
   top: 0;
-  z-index: 1000;>
+  z-index: 1000;">
     <div class="container">
       <a class="navbar-brand" href="index.html">Bike Store</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -78,69 +83,64 @@
   <div class="container mt-4">
     <h1 class="text-center mb-4">Bikes</h1>
 
-    <div class="row">
-      <div class="col-lg-4 col-md-6">
-        <div class="card text-center">
-          <img src="images/mtbbanner.jpg" class="card-img-top" alt="Mountain Bike">
-          <div class="card-body">
-            <h5 class="card-title">Mountain Bike</h5>
-      
-            <a href="mountain_bike_products.html" class="btn btn-primary">View Details</a>
-            
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="card text-center">
-          <img src="images/rbbanner.jfif" class="card-img-top" alt="Road Bike">
-          <div class="card-body">
-            <h5 class="card-title">Road Bike</h5>
-         
-            <a href="road_bike_products.html" class="btn btn-primary">View Details</a>
-           
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="card text-center">
-          <img src="images/photo-1605050825077-289f85b6cf43.avif" class="card-img-top" alt="Road Bike">
-          <div class="card-body">
-            <h5 class="card-title">Hybrid</h5>
-        
-            <a href="hybrid_bike_products.html" class="btn btn-primary">View Details</a>
-           
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="card text-center">
-          <img src="images/ebikebanner.jfif" class="card-img-top" alt="Electric Bike">
-          <div class="card-body">
-            <h5 class="card-title">Electric Bike</h5>
-            
-            <a href="electric_bike_products.html" class="btn btn-primary">View Details</a>
-           
-          </div>
-        </div>
-      </div>
-
+   
+    
       <!-- Add more bike cards here -->
-      <div class="col-lg-4 col-md-6">
-        <div class="card text-center">
-          <img src="images/zack-pianko-kyle-thornhill-1-1586460314.jpg" class="card-img-top" alt="Gravel Bike">
-          <div class="card-body">
-            <h5 class="card-title">Gravel Bike</h5>
-           
-            <a href="gravel.html" class="btn btn-primary" >View Details</a>
-           
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="card text-center">
+            <img src="images/mtbbanner.jpg" class="card-img-top img-fluid" alt="Mountain Bike">
+            <div class="card-body">
+              <h5 class="card-title">Mountain Bike</h5>
+              <a href="mountain_bike_products.html" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-lg-4 col-md-6">
+          <div class="card text-center">
+            <img src="images/rbbanner.jfif" class="card-img-top img-fluid" alt="Road Bike">
+            <div class="card-body">
+              <h5 class="card-title">Road Bike</h5>
+              <a href="road_bike_products.html" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-lg-4 col-md-6">
+          <div class="card text-center">
+            <img src="images/hybridbanner.jpg" class="card-img-top img-fluid" alt="Hybrid Bike">
+            <div class="card-body">
+              <h5 class="card-title">Hybrid</h5>
+              <a href="hybrid_bike_products.html" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-lg-4 col-md-6">
+          <div class="card text-center">
+            <img src="images/ebikebanner.jfif" class="card-img-top img-fluid" alt="Electric Bike">
+            <div class="card-body">
+              <h5 class="card-title">Electric Bike</h5>
+              <a href="electric_bike_products.html" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Add more bike cards here -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card text-center">
+            <img src="images/zack-pianko-kyle-thornhill-1-1586460314.jpg" class="card-img-top img-fluid" alt="Gravel Bike">
+            <div class="card-body">
+              <h5 class="card-title">Gravel Bike</h5>
+              <a href="gravel.html" class="btn btn-primary">View Details</a>
+            </div>
           </div>
         </div>
       </div>
+      
     </div>
-  </div>
+    
   <!-- Main content -->
 
     <!-- Cart Modal -->
