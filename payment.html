@@ -4,9 +4,70 @@
   <title>Payment Method</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
+    .container {
+      margin-top: 50px;
+      text-align: center;
+    }
+
     .payment-details {
       display: none;
+      margin-top: 30px;
     }
+
+    .payment-details h3 {
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+
+    .modal-content {
+      background-color: #f8f9fa;
+    }
+
+    .modal-body {
+      color: #212529;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0069d9;
+      border-color: #0062cc;
+    }
+    
+    #submitButton {
+  position: relative;
+}
+
+#submitButton.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1em;
+  height: 1em;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
   </style>
 </head>
 <body>
@@ -91,7 +152,7 @@
                 <option value="EUR">EUR</option>
                 <option value="GBP">GBP</option>
                 <option value="PHP">PHP</option>
-                <!-- Add more currency options here -->
+
               </select>
             </div>
           </div>
@@ -104,7 +165,8 @@
               <input type="text" id="maybankAccount" name="maybankAccount" class="form-control">
             </div>
           </div>
-      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+          <button id="submitButton" type="submit" class="btn btn-primary mt-3">Submit</button>
+
     </form>
   </div>
 
@@ -132,54 +194,71 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
-    function submitForm(event) {
-      event.preventDefault();
+   function submitForm(event) {
+  event.preventDefault();
 
-      // Check if the selected form is filled up
-      var selectedMethod = $('#paymentMethod').val();
-      var isFormFilled = false;
-      switch (selectedMethod) {
-        case 'gcash':
-          isFormFilled = $('#gcashNumber').val() !== '';
-          break;
-        case 'bank':
-          isFormFilled = ($('#bankName').val() !== '' && $('#accountNumber').val() !== '');
-          break;
-        case 'creditCard':
-          isFormFilled = ($('#cardNumber').val() !== '' && $('#expiryDate').val() !== '' && $('#cvv').val() !== '' && $('#name').val() !== '');
-          break;
-        case 'paypal':
-          isFormFilled = $('#paypalEmail').val() !== '';
-          break;
-        case 'maybank':
-          isFormFilled = $('#maybankAccount').val() !== '';
-          break;
-      }
+  // Check if the selected form is filled up
+  var selectedMethod = $('#paymentMethod').val();
+  var isFormFilled = false;
+  switch (selectedMethod) {
+    case 'gcash':
+      isFormFilled = $('#gcashNumber').val() !== '';
+      break;
+    case 'bank':
+      isFormFilled = ($('#bankName').val() !== '' && $('#accountNumber').val() !== '');
+      break;
+    case 'creditCard':
+      isFormFilled = ($('#cardNumber').val() !== '' && $('#expiryDate').val() !== '' && $('#cvv').val() !== '' && $('#name').val() !== '');
+      break;
+    case 'paypal':
+      isFormFilled = $('#paypalEmail').val() !== '';
+      break;
+    case 'maybank':
+      isFormFilled = $('#maybankAccount').val() !== '';
+      break;
+  }
 
-      // Show alert if the form is not filled up
-      if (!isFormFilled) {
-        alert('Please fill up the  form.');
-        return;
-      }
+  // Show alert if the form is not filled up
+  if (!isFormFilled) {
+    alert('Please fill up the form.');
+    return;
+  }
 
-      // Perform form submission tasks here
+  // Disable the submit button to prevent multiple clicks
+  var submitButton = document.getElementById('submitButton');
+  submitButton.disabled = true;
 
-      // Show success modal
-      $('#successModal').modal('show');
-    }
+  // Add the loading class to the submit button
+  submitButton.classList.add('loading');
 
-    function goToCart() {
-      // Reload the page to go back to the cart
-      window.location.href = 'cart.html';
-    }
+  // Simulate an asynchronous operation
+  setTimeout(function() {
+    // Enable the submit button
+    submitButton.disabled = false;
 
-    $(document).ready(function() {
-      $('#paymentMethod').change(function() {
-        var selectedMethod = $(this).val();
-        $('.payment-details').hide();
-        $('#' + selectedMethod + 'Details').show();
-      });
-    });
+    // Remove the loading class from the submit button
+    submitButton.classList.remove('loading');
+
+    // Perform form submission tasks here
+
+    // Show success modal
+    $('#successModal').modal('show');
+  }, 2000);
+}
+
+function goToCart() {
+  // Reload the page to go back to the cart
+  window.location.href = 'cart.html';
+}
+
+$(document).ready(function() {
+  $('#paymentMethod').change(function() {
+    var selectedMethod = $(this).val();
+    $('.payment-details').hide();
+    $('#' + selectedMethod + 'Details').show();
+  });
+});
+
   </script>
 </body>
 </html>

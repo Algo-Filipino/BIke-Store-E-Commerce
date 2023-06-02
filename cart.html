@@ -54,6 +54,33 @@
       font-style: italic;
       color: gray;
     }
+    #checkoutButton {
+  position: relative;
+}
+
+#checkoutButton.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1em;
+  height: 1em;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
   </style>
 
 </head>
@@ -536,17 +563,29 @@
   cartItems = [];
   const checkoutButton = document.getElementById('checkoutButton');
   checkoutButton.disabled = true;
+  
+  // Add the loading class to the button
+  checkoutButton.classList.add("loading");
 
-  // Show a success message
-  alert('Checkout completed!');
-  // Store the updated cart items (empty) in local storage
-  localStorage.setItem('cartItems', JSON.stringify(cartItems));
-  window.location.href = 'payment.html';
-  // Render the updated cart items (empty)
-  renderCartItems();
-}
-
+  // Simulate an asynchronous operation
+  setTimeout(function() {
+    // Remove the loading class from the button
+    checkoutButton.classList.remove("loading");
     
+    // Show a success message
+    alert('Checkout completed!');
+    
+    // Store the updated cart items (empty) in local storage
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    
+    // Redirect to the payment page
+    window.location.href = 'payment.html';
+    
+    // Render the updated cart items (empty)
+    renderCartItems();
+  }, 2000);
+}
+   
     // Initial rendering of the cart items
     renderCartItems();
 
