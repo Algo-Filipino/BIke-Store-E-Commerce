@@ -527,19 +527,24 @@
 
     // Function to handle the checkout button click
     function checkout() {
-      // Clear the cart items array
-      cartItems = [];
-      const checkoutButton = document.getElementById('checkoutButton');
-      checkoutButton.disabled = true;
-  
-      // Show a success message
-      alert('Checkout completed!');
-      // Store the updated cart items (empty) in local storage
-      localStorage.setItem('cartItems', JSON.stringify(cartItems));
-      window.location.href = 'payment.html';
-      // Render the updated cart items (empty)
-      renderCartItems();
-    }
+  if (cartItems.length === 0) {
+    alert('Your cart is empty. Please add items before checking out.');
+    return; // Exit the function if the cart is empty
+  }
+
+  // Clear the cart items array
+  cartItems = [];
+  const checkoutButton = document.getElementById('checkoutButton');
+  checkoutButton.disabled = true;
+
+  // Show a success message
+  alert('Checkout completed!');
+  // Store the updated cart items (empty) in local storage
+  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  window.location.href = 'payment.html';
+  // Render the updated cart items (empty)
+  renderCartItems();
+}
 
     
     // Initial rendering of the cart items
