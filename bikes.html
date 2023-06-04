@@ -11,11 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-  <link rel="stylesheet" href="css/bootstrap.min.css"/>
-		<script src="js/jquery2.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="path/to/bootstrap.min.css">
-<script src="path/to/bootstrap.bundle.min.js"></script>
+
 
 </head>
 <style>
@@ -26,26 +22,19 @@
 </style>
 <body>
   <!-- Navigation -->
-  <header class="navbar navbar-expand-lg navbar-light bg-light sticky-navbar" style=" position: sticky;
-  top: 0;
-  z-index: 1000;">
+  <header class="navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Bike Store</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+      <div class="brand-section">
+        <a class="brand" href="index.html">Bike Store</a>
+      </div>
+      <div class="links-section">
+        <ul class="nav-list">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Products
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-toggle" href="#" id="myNavbarDropdown" role="button" aria-expanded="false">Products</a>
+            <ul class="dropdown-menu" aria-labelledby="myNavbarDropdown">
               <li><a class="dropdown-item" href="bikes.html">Bikes</a></li>
               <li><a class="dropdown-item" href="accessories.html">Accessories</a></li>
             </ul>
@@ -64,32 +53,29 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="login.html">
-              <i class="fas fa-user"></i> <!-- Font Awesome user icon -->
-              Login
+              <i class="fas fa-user"></i> Login
             </a>
           </li>
         </ul>
       </div>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-primary" type="submit">
-          <i class="fas fa-search"></i> <!-- Font Awesome search icon -->
+    </div>
+    <div class="right-corner">
+      <form class="search-form">
+        <input class="search-input" type="search" placeholder="Search" aria-label="Search">
+        <button class="search-button" type="submit">
+          <i class="fas fa-search"></i> 
         </button>
       </form>
     </div>
   </header>
 
   <!-- Main content -->
-  <div class="container mt-4">
-    <h1 class="text-center mb-4">Bikes</h1>
-
-   
+  <div class="container-bike">
     
-      <!-- Add more bike cards here -->
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
+
+        <div class="cont1">
           <div class="card text-center">
-            <img src="images/mtbbanner.jpg" class="card-img-top img-fluid" alt="Mountain Bike">
+            <img src="images/mtbbanner.jpg" class="card-img-top" alt="Mountain Bike">
             <div class="card-body">
               <h5 class="card-title">Mountain Bike</h5>
               <a href="mountain_bike_products.html" class="btn btn-primary">View Details</a>
@@ -97,9 +83,9 @@
           </div>
         </div>
       
-        <div class="col-lg-4 col-md-6">
+        <div class="cont1">
           <div class="card text-center">
-            <img src="images/rbbanner.jfif" class="card-img-top img-fluid" alt="Road Bike">
+            <img src="images/rbbanner.jfif" class="card-img-top" alt="Road Bike">
             <div class="card-body">
               <h5 class="card-title">Road Bike</h5>
               <a href="road_bike_products.html" class="btn btn-primary">View Details</a>
@@ -107,9 +93,9 @@
           </div>
         </div>
       
-        <div class="col-lg-4 col-md-6">
+        <div class="cont1">
           <div class="card text-center">
-            <img src="images/hybridbanner.jpg" class="card-img-top img-fluid" alt="Hybrid Bike">
+            <img src="images/hybridbanner.jpg" class="card-img-top" alt="Hybrid Bike">
             <div class="card-body">
               <h5 class="card-title">Hybrid</h5>
               <a href="hybrid_bike_products.html" class="btn btn-primary">View Details</a>
@@ -117,103 +103,99 @@
           </div>
         </div>
       
-        <div class="col-lg-4 col-md-6">
+        <div class="cont1">
           <div class="card text-center">
-            <img src="images/ebikebanner.jfif" class="card-img-top img-fluid" alt="Electric Bike">
+            <img src="images/ebikebanner.jfif" class="card-img-top" alt="Electric Bike">
             <div class="card-body">
               <h5 class="card-title">Electric Bike</h5>
               <a href="electric_bike_products.html" class="btn btn-primary">View Details</a>
             </div>
           </div>
         </div>
-      
-        <!-- Add more bike cards here -->
-        <div class="col-lg-4 col-md-6">
+        <div class="cont1">
           <div class="card text-center">
-            <img src="images/zack-pianko-kyle-thornhill-1-1586460314.jpg" class="card-img-top img-fluid" alt="Gravel Bike">
+            <img src="images/zack-pianko-kyle-thornhill-1-1586460314.jpg" class="card-img-top" alt="Gravel Bike">
             <div class="card-body">
               <h5 class="card-title">Gravel Bike</h5>
               <a href="gravel.html" class="btn btn-primary">View Details</a>
             </div>
           </div>
         </div>
-      </div>
-      
+    
     </div>
     
   <!-- Main content -->
-
-    <!-- Cart Modal -->
-    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="cartModalLabel">Cart</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="closeButton"></button>
-          </div>
-          <div class="modal-body">
-            <div id="cartContent">
-              <div class="cart-total">
-                Total: ₱<span id="cartTotal">0.00</span>
-              </div>
-                
-               
-            </div>
-            <div class="modal-footer">
-  
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close" id="conshop">Continue Shopping</button>
-  
-            </div>
-          </div>
+  <!-- Modal -->
+  <div class="modal-overlay" id="cartModalOverlay"></div>
+  <div class="modal" id="cartModal">
+    <div class="modal-header">
+      <h5 class="modal-title" id="cartModalLabel">Cart</h5>
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+    </div>
+    <div class="modal-body">
+      <div id="cartContent">
+        <div class="cart-total">
+          Total: ₱<span id="cartTotal">0.00</span>
         </div>
       </div>
     </div>
-  
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" id="conshop" onclick="closeModal()">Continue Shopping</button>
+    </div>
+  </div>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h5>Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Bikes</a></li>
-            <li><a href="#">Accessories</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5>Connect With Us</h5>
-          <ul class="list-unstyled">
-            <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-            <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5>Contact Info</h5>
-          <ul class="list-unstyled">
-            <li><i class="fas fa-phone"></i> +1 123-456-7890</li>
-            <li><i class="fas fa-envelope"></i> info@bikestore.com</li>
-            <li><i class="fas fa-map-marker-alt"></i> Philippines</li>
-          </ul>
-        </div>
+  
+<!-- Footer -->
+<footer class="footer">
+  <div class="cont">
+    <div class="row">
+      <div class="links">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Bikes</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="links">
+        <h5>Connect With Us</h5>
+        <ul class="list-unstyled">
+          <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="links">
+        <h5>Contact Info</h5>
+        <ul class="list-unstyled">
+          <li><i class="fas fa-phone"></i> +1 123-456-7890</li>
+          <li><i class="fas fa-envelope"></i> info@bikestore.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Philippines</li>
+        </ul>
       </div>
     </div>
-    <div class="text-center">
-      &copy; 2023 Bike Store. All rights reserved.<br>
-      <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="contact.html">Contact Us</a>
-    </div>
-  </footer>
-  <!-- Footer content -->
+  </div>
+  
+  <div class="text-center">
+    &copy; 2023 Bike Store. All rights reserved.<br>
+    <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="contact.html">Contact Us</a>
+  </div>
+</footer>
 
+
+<script>
+  function closeModal() {
+  location.reload();
+}
+
+</script>
   <!-- JavaScript -->
   <script src="script.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
   <script>
     function toggleDetails(event) {
       event.preventDefault();
@@ -226,22 +208,7 @@
     }
   </script>
 
-<script>
-  document.getElementById('closeButton').addEventListener('click', function() {
-    location.reload(); // Reload the page
-  });
-
-  document.getElementById('conshop').addEventListener('click', function() {
-    location.reload(); // Reload the page
-  });
-</script>
-<script>
-  var cartModal = document.getElementById('cartModal');
-  cartModal.addEventListener('show.bs.modal', function () {
-    var cartContent = document.getElementById('cartContent');
-    cartContent.innerHTML = '<iframe src="cart.html" style="width: 100%; height: 400px; border: none;"></iframe>';
-  });
-</script>
+<script src="cartmodal.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 
 </html>

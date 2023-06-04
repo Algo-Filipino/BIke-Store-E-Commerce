@@ -9,46 +9,71 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css"/>
-		<script src="js/jquery2.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="path/to/bootstrap.min.css">
-<script src="path/to/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  
+  <style>
+      #about-us-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-color: #f2f2f2;
+}
 
+.container {
+  width: 80%;
+}
 
+.row-cont {
+  display: flex;
+  justify-content: center;
+}
 
+.content {
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+  </style>
 </head>
 
 <body>
   <!-- Navigation -->
  
-  <!-- Navigation -->
-  <header class="navbar navbar-expand-lg navbar-light bg-light sticky-navbar" style=" position: sticky;
-  top: 0;
-  z-index: 1000;">
+  <header class="navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Bike Store</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+      <div class="brand-section">
+        <a class="brand" href="index.html">Bike Store</a>
+        <button class="navbar-toggler" type="button" onclick="toggleNavbar()" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+      </div>
+      <div class="links-section">
+        <ul class="nav-list">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Products
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-toggle" href="#" id="myNavbarDropdown" role="button" aria-expanded="false">Products</a>
+            <ul class="dropdown-menu" aria-labelledby="myNavbarDropdown">
               <li><a class="dropdown-item" href="bikes.html">Bikes</a></li>
               <li><a class="dropdown-item" href="accessories.html">Accessories</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="#about-us-section">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact Us</a>
@@ -61,50 +86,66 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="login.html">
-              <i class="fas fa-user"></i> <!-- Font Awesome user icon -->
-              Login
+              <i class="fas fa-user"></i> Login
             </a>
           </li>
         </ul>
       </div>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-primary" type="submit">
-          <i class="fas fa-search"></i> <!-- Font Awesome search icon -->
+    </div>
+    <div class="right-corner">
+      <form class="search-form">
+        <input class="search-input" type="search" placeholder="Search" aria-label="Search">
+        <button class="search-button" type="submit">
+          <i class="fas fa-search"></i> 
         </button>
       </form>
     </div>
   </header>
-  
-  
+
   
 
   
 
   <!-- Main content -->
-  <div class="container mt-4">
+  <div class="hero">
     <div class="jumbotron jumbotron-with-image">
       <div class="banner-image">
       
       </div>
       <div class="text-content">
-        <h1 class="display-4">Welcome to Bike Store</h1>
+        <h1 class="display">Welcome to Bike Store</h1>
         <p class="lead">Experience the joy of biking with our high-quality bikes and accessories.</p>
-        <a href="bikes.html" class="btn btn-primary btn-lg">Explore Bikes</a>
+        
+        <a href="bikes.html" class="explore">Explore Bikes</a>
       </div>
     </div>
   </div>
   
 
+  <!-- About Us Section -->
+  <section id="about-us-section">
+    <div class="container">
+      <div class="row-cont">
+        <div class="col-lg-8 offset-lg-2">
+          <h2>About Us</h2>
+          <p>
+            We are not your ordinary bike shop; we are a passionate collective of individuals who are deeply dedicated to all things associated with riding. At Bike Store, we harbor a strong passion for bicycles and firmly embrace the liberating and delightful experiences they bring into people's lives.
+          </p>
+          <p>
+            Our objective is to deliver a flawless and gratifying purchasing experience for every biking aficionado, regardless of whether you are a well-seasoned cyclist or a beginner. We comprehend the excitement and exploration that accompany biking, ranging from the electrifying rush of descending a mountain trail to the tranquil serenity of a leisurely countryside excursion.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  
-  
-  <section class="shop container">
+
+  <section class="shop">
     <h2 class="section-title">Best Selling Products</h2>
   
-    <div class="row shop-content">
+    <div class="shop-content">
   
-      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="item-container">
         <div class="product-box">
           <div class="product-image">
             <img src="images/rb-PARIS-RIVAL-B102-ORANGE.jpg" alt="" class="product-img">
@@ -114,9 +155,9 @@
               </a>
             </div>
           </div>
-          <div class="product-details">
-            <h2 class="product-title">PINARELLO PARIS RIVAL AXS BIKE</h2>
+          <h5 class="product-title">PINARELLO PARIS RIVAL AXS BIKE</h5>
             <span class="price">₱262,750.00</span>
+          <div class="product-details">        
             <div class="specs">
               <h3>Specifications:</h3>
               <ul>
@@ -141,7 +182,7 @@
       
       
   
-      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="item-container">
         <div class="product-box">
           <div class="product-image">
             <img src="images/mtb-CERVELO-ZHT-5-GX-AXS-MOSS-KHAKI-1.jpg" alt="" class="product-img">
@@ -151,9 +192,10 @@
               </a>
             </div>
           </div>
-          <div class="product-details">
-            <h5 class="product-title">CERVELO ZHT-5 GX EAGLE AXS BIKE</h2>
+           <h5 class="product-title">CERVELO ZHT-5 GX EAGLE AXS BIKE</h2>
             <span class="price">₱244,800.00</span>
+          <div class="product-details">
+           
             <div class="specs">
               <h3>Specifications:</h3>
               <ul>
@@ -171,12 +213,12 @@
               <span class="star">&#9733;</span>
             </div>
           </div>
-        </div><br>
+        </div>
       </div>
       
       
   
-      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="item-container">
         <div class="product-box">
           <div class="product-image">
             <img src="images/gravel-YQB51IZD.jpg" alt="" class="product-img">
@@ -186,9 +228,10 @@
               </a>
             </div>
           </div>
-          <div class="product-details">
-            <h2 class="product-title">BIANCHI ZOLDER PRO BIKE</h2>
+          <h5 class="product-title">BIANCHI ZOLDER PRO BIKE</h5>
             <span class="price">₱193,800.00</span>
+          <div class="product-details">
+            
             <div class="specs">
               <h3>Specifications:</h3>
               <ul>
@@ -206,10 +249,10 @@
               <span class="star">&#9733;</span>
             </div>
           </div>
-        </div><br>
+        </div><
       </div>
       
-      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="item-container">
         <div class="product-box">
           <div class="product-image">
             <img src="images/gravel-00EVTV170CGRX--BLKLGSTDHN.jpg" alt="" class="product-img">
@@ -219,9 +262,10 @@
               </a>
             </div>
           </div>
-          <div class="product-details">
-            <h2 class="product-title">PIVOT E-VAULT TEAM GRX DI2 BIKE</h2>
+            <h5 class="product-title">PIVOT E-VAULT TEAM GRX DI2 BIKE</h5>
             <span class="price">₱382,499.00</span>
+          <div class="product-details">
+          
             <div class="specs">
               <h3>Specifications:</h3>
               <ul>
@@ -240,10 +284,10 @@
             </div>
           </div>
         </div>
-        <br>
+        
       </div>
       
-      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="item-container">
         <div class="product-box">
           <div class="product-image">
             <img src="images/triath-P3_red_R8000-1.jpg" alt="" class="product-img">
@@ -253,9 +297,10 @@
               </a>
             </div>
           </div>
-          <div class="product-details">
-            <h2 class="product-title">CERVELO P3 ULTEGRA BIKE</h2>
+           <h5 class="product-title">CERVELO P3 ULTEGRA BIKE</h5>
             <span class="price">₱183,549.00</span>
+          <div class="product-details">
+           
             <div class="specs">
               <h3>Specifications:</h3>
               <ul>
@@ -272,12 +317,12 @@
               <span class="star">&#9733;</span>
             </div>
           </div>
-        </div><br>
+        </div>
       </div>
       
       
   
-      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="item-container">
         <div class="product-box">
           <div class="product-image">
             <img src="images/air-pump-PUMPS_MAMMOTH_2STAGE_BLK.jpg" alt="" class="product-img">
@@ -287,9 +332,10 @@
               </a>
             </div>
           </div>
-          <div class="product-details">
-            <h2 class="product-title">BLACKBURN 2STAGE ANYVALVE AIR PUMP</h2>
+           <h5 class="product-title">BLACKBURN 2STAGE ANYVALVE AIR PUMP</h5>
             <span class="price">₱1,785.00</span>
+          <div class="product-details">
+           
             <div class="specs">
               <h3>Specifications:</h3>
               <ul>
@@ -306,12 +352,12 @@
               <span class="star">&#9733;</span>
             </div>
           </div>
-        </div><br>
+        </div>
       </div>
       
       
   
-      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="item-container">
         <div class="product-box">
           <div class="product-image">
             <img src="images/e-bike-sct_silnce10_m_b_0-_1.jpg" alt="" class="product-img">
@@ -321,9 +367,10 @@
               </a>
             </div>
           </div>
-          <div class="product-details">
-            <h2 class="product-title">SCOTT SILENCE ERIDE 10 BIKE</h2>
+           <h5 class="product-title">SCOTT SILENCE ERIDE 10 BIKE</h5>
             <span class="price">₱178,500.00</span>
+          <div class="product-details">
+           
             <div class="specs">
               <h3>Specifications:</h3>
               <ul>
@@ -341,9 +388,9 @@
               <span class="star">&#9733;</span>
             </div>
           </div>
-        </div><br>
+        </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="item-container">
         <div class="product-box">
           <div class="product-image">
             <img src="images/pedal-TIME-XPRO-XPRESSO-FREE-CLEAT.jpg" alt="" class="product-img">
@@ -353,9 +400,10 @@
               </a>
             </div>
           </div>
-          <div class="product-details">
-            <h2 class="product-title">TIME XPRO/XPRESSO ICLIC CLEATS - FLOATING</h2>
+          <h5 class="product-title">TIME XPRO/XPRESSO ICLIC CLEATS - FLOATING</h5>
             <span class="price">₱1,173.00</span>
+          <div class="product-details">
+            
             <div class="specs">
               <h3>Specifications:</h3>
               <ul>
@@ -375,7 +423,7 @@
         <br>
       </div>
 
-      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="item-container">
         <div class="product-box">
           <div class="product-image">
             <img src="images/saddle-PR30_Black_1.jpg" alt="" class="product-img">
@@ -385,9 +433,10 @@
               </a>
             </div>
           </div>
-          <div class="product-details">
-            <h2 class="product-title">ISM PR 3.0 SADDLE</h2>
+          <h5 class="product-title">ISM PR 3.0 SADDLE</h5>
             <span class="price">₱8,153.88</span>
+          <div class="product-details">
+            
             <div class="specs">
               <h3>Specifications:</h3>
               <ul>
@@ -406,9 +455,9 @@
             </div>
           </div>
         </div>
-        <br>
+      
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="item-container">
         <div class="product-box">
           <div class="product-image">
             <img src="images/chainring-Powertap_C1_Chainrings_1.jpg" alt="" class="product-img">
@@ -418,9 +467,10 @@
               </a>
             </div>
           </div>
-          <div class="product-details">
-            <h2 class="product-title">POWERTAP C1 CHAINRINGS</h2>
+           <h5 class="product-title">POWERTAP C1 CHAINRINGS</h5>
             <span class="price">₱20,349.00</span>
+          <div class="product-details">
+           
             <div class="specs">
               <h3>Specifications:</h3>
               <ul>
@@ -441,9 +491,9 @@
               <span class="star">&#9733;</span>
             </div>
           </div>
-        </div><br>
+        </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="item-container">
         <div class="product-box">
           <div class="product-image">
             <img src="images/brake-ST-R9100-SET.jpg" alt="" class="product-img">
@@ -453,9 +503,10 @@
               </a>
             </div>
           </div>
-          <div class="product-details">
-            <h2 class="product-title">SHIMANO DURA-ACE ST-R9100 SHIFTER/BRAKE LEVER SET</h2>
+            <h5 class="product-title">SHIMANO DURA-ACE ST-R9100 SHIFTER/BRAKE LEVER SET</h5>
             <span class="price">₱28,049.99</span>
+          <div class="product-details">
+          
             <div class="specs">
               <h3>Specifications:</h3>
               <ul>
@@ -471,9 +522,9 @@
               <span class="star">&#9733;</span>
             </div>
           </div>
-        </div><br>
+        </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="item-container">
         <div class="product-box">
           <div class="product-image">
             <img src="images/tire-Mountain-King-II-Black-22_1.jpg" alt="" class="product-img">
@@ -483,9 +534,10 @@
               </a>
             </div>
           </div>
-          <div class="product-details">
-            <h2 class="product-title">CONTINENTAL MOUNTAIN KING II 27.5" CLINCHER TIRE</h2>
+           <h5 class="product-title">CONTINENTAL MOUNTAIN KING II 27.5" CLINCHER TIRE</h5>
             <span class="price">₱1,121.49</span>
+          <div class="product-details">
+           
             <div class="specs">
               <h3>Specifications:</h3>
               <ul>
@@ -511,37 +563,32 @@
   </section>
   
     
-  <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="cartModalLabel">Cart</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="closeButton"></button>
-        </div>
-        <div class="modal-body">
-          <div id="cartContent">
-            <div class="cart-total">
-              Total: ₱<span id="cartTotal">0.00</span>
-            </div>
-              
-             
-          </div>
-          <div class="modal-footer">
 
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close" id="conshop">Continue Shopping</button>
-
-          </div>
+  <!-- Modal -->
+  <div class="modal-overlay" id="cartModalOverlay"></div>
+  <div class="modal" id="cartModal">
+    <div class="modal-header">
+      <h5 class="modal-title" id="cartModalLabel">Cart</h5>
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+    </div>
+    <div class="modal-body">
+      <div id="cartContent">
+        <div class="cart-total">
+          Total: ₱<span id="cartTotal">0.00</span>
         </div>
       </div>
     </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" id="conshop" onclick="closeModal()">Continue Shopping</button>
+    </div>
   </div>
-  
+
   
 <!-- Footer -->
 <footer class="footer">
-  <div class="container">
+  <div class="cont">
     <div class="row">
-      <div class="col-md-4">
+      <div class="links">
         <h5>Quick Links</h5>
         <ul class="list-unstyled">
           <li><a href="#">Home</a></li>
@@ -551,7 +598,7 @@
           <li><a href="#">Contact Us</a></li>
         </ul>
       </div>
-      <div class="col-md-4">
+      <div class="links">
         <h5>Connect With Us</h5>
         <ul class="list-unstyled">
           <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
@@ -560,7 +607,7 @@
           <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
         </ul>
       </div>
-      <div class="col-md-4">
+      <div class="links">
         <h5>Contact Info</h5>
         <ul class="list-unstyled">
           <li><i class="fas fa-phone"></i> +1 123-456-7890</li>
@@ -570,6 +617,7 @@
       </div>
     </div>
   </div>
+  
   <div class="text-center">
     &copy; 2023 Bike Store. All rights reserved.<br>
     <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="contact.html">Contact Us</a>
@@ -578,13 +626,10 @@
 
 
 <script>
-  document.getElementById('closeButton').addEventListener('click', function() {
-    location.reload(); // Reload the page
-  });
+  function closeModal() {
+  location.reload();
+}
 
-  document.getElementById('conshop').addEventListener('click', function() {
-    location.reload(); // Reload the page
-  });
 </script>
  <script>
   // Retrieve stored cart items from local storage, or initialize an empty array
@@ -629,13 +674,19 @@
   updateCartBadge();
 </script>
 <script>
-var cartModal = document.getElementById('cartModal');
-cartModal.addEventListener('show.bs.modal', function () {
-  var cartContent = document.getElementById('cartContent');
-  cartContent.innerHTML = '<iframe src="cart.html" style="width: 100%; height: 400px; border: none;"></iframe>';
-});
+  function toggleDropdown() {
+    var dropdown = document.querySelector('.dropdown-menu');
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+  }
+
+  function toggleNavbar() {
+    var navList = document.querySelector('.nav-list');
+    navList.style.display = navList.style.display === 'block' ? 'none' : 'block';
+  }
 </script>
 
+<script src="cartmodal.js"></script>
+<script src="search.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </body>
 

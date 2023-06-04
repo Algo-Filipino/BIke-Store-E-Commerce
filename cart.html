@@ -6,57 +6,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bike Store - Cart</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css"/>
-  <script src="js/jquery2.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="path/to/bootstrap.min.css">
-  <script src="path/to/bootstrap.bundle.min.js"></script>
+
   <style>
-    .cart-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    .cart-item-image {
-      width: 100px;
-      height: auto;
-      margin-right: 10px;
-    }
-
-    .cart-item-details {
-      flex-grow: 1;
-    }
-
-    .cart-item-title {
-      font-size: 18px;
-      margin-bottom: 5px;
-    }
-
-    .cart-item-price {
-      font-size: 16px;
-      margin-bottom: 5px;
-    }
-
-    .cart-item-action {
-      margin-right: 10px;
-    }
-
-    .cart-total {
-      margin-top: 20px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .empty-cart-message {
-      text-align: center;
-      font-size: 16px;
-      font-style: italic;
-      color: gray;
-    }
-    #checkoutButton {
-  position: relative;
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
+
+.cart-item-image {
+  width: 200px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+}
+
+.cart-item-title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.cart-item-price {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.cart-item-action {
+  margin-right: 10px;
+}
+
+.cart-total {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.empty-cart-message {
+  text-align: center;
+  font-size: 16px;
+  font-style: italic;
+  color: gray;
+}
+
 
 #checkoutButton.loading::after {
   content: "";
@@ -88,8 +82,8 @@
 <body>
 
   <!-- Cart content -->
-    <div class="container">
-      <h3>Order Summary</h3> 
+    <div class="content">
+      <h3>Order Summary</h3> <br>
       <div class="cart-items">
         <!-- JavaScript code will dynamically populate the cart items here -->
       </div>
@@ -133,7 +127,7 @@
             <img src="${getImageUrl(item.id)}" alt="Product Image" class="cart-item-image">
             <div class="cart-item-details">
               <h5 class="cart-item-title" style="font-weight: bold;">${getItemTitle(item.id)}</h5>
-              <div>
+              <div style="width: 10px;">
                 Quantity: <input type="number" value="${item.quantity}" min="1" onchange="updateQuantity('${item.id}', this.value)">
               </div>
               <p class="cart-item-price">₱${getItemPrice(item.id)}</p>
