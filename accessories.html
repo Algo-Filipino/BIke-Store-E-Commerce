@@ -25,8 +25,11 @@
     <div class="container">
       <div class="brand-section">
         <a class="brand" href="index.html">Bike Store</a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
-      <div class="links-section">
+      <div class="links-section collapse navbar-collapse" id="navbarCollapse">
         <ul class="nav-list">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
@@ -39,7 +42,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about-us-section">About</a>
+            <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact Us</a>
@@ -176,7 +179,17 @@
   }
   
   </script>
-
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var navbarToggler = document.querySelector(".navbar-toggler");
+    var navbarCollapse = document.querySelector(".links-section");
+  
+    navbarToggler.addEventListener("click", function() {
+      navbarCollapse.classList.toggle("show");
+    });
+  });
+  
+  </script>
 <script src="cartmodal.js"></script>
   <script>
     // Retrieve stored cart items from local storage, or initialize an empty array

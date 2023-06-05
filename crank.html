@@ -10,53 +10,56 @@
 </head>
 
 <body>
-    <!-- Navigation -->
-    <header class="navbar">
-      <div class="container">
-        <div class="brand-section">
-          <a class="brand" href="index.html">Bike Store</a>
-        </div>
-        <div class="links-section">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="dropdown-toggle" href="#" id="myNavbarDropdown" role="button" aria-expanded="false">Products</a>
-              <ul class="dropdown-menu" aria-labelledby="myNavbarDropdown">
-                <li><a class="dropdown-item" href="bikes.html">Bikes</a></li>
-                <li><a class="dropdown-item" href="accessories.html">Accessories</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
-                <i class="fas fa-shopping-cart"></i> <!-- Font Awesome shopping cart icon -->
-                Cart
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">
-                <i class="fas fa-user"></i> Login
-              </a>
-            </li>
-          </ul>
-        </div>
+   <!-- Navigation -->
+  <header class="navbar">
+    <div class="container">
+      <div class="brand-section">
+        <a class="brand" href="index.html">Bike Store</a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
-      <div class="right-corner">
-        <form class="search-form">
-          <input class="search-input" type="search" placeholder="Search" aria-label="Search">
-          <button class="search-button" type="submit">
-            <i class="fas fa-search"></i> 
-          </button>
-        </form>
+      <div class="links-section collapse navbar-collapse" id="navbarCollapse">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="dropdown-toggle" href="#" id="myNavbarDropdown" role="button" aria-expanded="false">Products</a>
+            <ul class="dropdown-menu" aria-labelledby="myNavbarDropdown">
+              <li><a class="dropdown-item" href="bikes.html">Bikes</a></li>
+              <li><a class="dropdown-item" href="accessories.html">Accessories</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
+              <i class="fas fa-shopping-cart"></i> <!-- Font Awesome shopping cart icon -->
+              Cart
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">
+              <i class="fas fa-user"></i> Login
+            </a>
+          </li>
+        </ul>
       </div>
-    </header>
+    </div>
+    <div class="right-corner">
+      <form class="search-form">
+        <input class="search-input" type="search" placeholder="Search" aria-label="Search">
+        <button class="search-button" type="submit">
+          <i class="fas fa-search"></i> 
+        </button>
+      </form>
+    </div>
+  </header>
     
     <!-- Navigation content -->
  <!-- Main content -->

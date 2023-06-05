@@ -11,56 +11,20 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
   
-  <style>
-      #about-us-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px;
-  background-color: #f2f2f2;
-}
-
-.container {
-  width: 80%;
-}
-
-.row-cont {
-  display: flex;
-  justify-content: center;
-}
-
-.content {
-  text-align: center;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  text-align: justify;
-  text-align: center;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.5;
-  text-align: justify;
-}
-  </style>
+  
 </head>
 
 <body>
   <!-- Navigation -->
- 
   <header class="navbar">
     <div class="container">
       <div class="brand-section">
         <a class="brand" href="index.html">Bike Store</a>
-        <button class="navbar-toggler" type="button" onclick="toggleNavbar()" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
         </button>
-        
       </div>
-      <div class="links-section">
+      <div class="links-section collapse navbar-collapse" id="navbarCollapse">
         <ul class="nav-list">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
@@ -101,13 +65,14 @@ p {
       </form>
     </div>
   </header>
+  
 
   
 
   
 
   <!-- Main content -->
-  <div class="hero">
+  <section class="hero">
     <div class="jumbotron jumbotron-with-image">
       <div class="banner-image">
       
@@ -119,19 +84,19 @@ p {
         <a href="bikes.html" class="explore">Explore Bikes</a>
       </div>
     </div>
-  </div>
+  </section>
   
 
   <!-- About Us Section -->
   <section id="about-us-section">
-    <div class="container">
+    <div class="container-txt">
       <div class="row-cont">
         <div class="col-lg-8 offset-lg-2">
-          <h2>About Us</h2>
-          <p>
+          <h2 class="abt">About Us</h2>
+          <p class="abt-pa"> 
             We are not your ordinary bike shop; we are a passionate collective of individuals who are deeply dedicated to all things associated with riding. At Bike Store, we harbor a strong passion for bicycles and firmly embrace the liberating and delightful experiences they bring into people's lives.
           </p>
-          <p>
+          <p class="abt-pa">
             Our objective is to deliver a flawless and gratifying purchasing experience for every biking aficionado, regardless of whether you are a well-seasoned cyclist or a beginner. We comprehend the excitement and exploration that accompany biking, ranging from the electrifying rush of descending a mountain trail to the tranquil serenity of a leisurely countryside excursion.
           </p>
         </div>
@@ -249,7 +214,7 @@ p {
               <span class="star">&#9733;</span>
             </div>
           </div>
-        </div><
+        </div>
       </div>
       
       <div class="item-container">
@@ -586,8 +551,8 @@ p {
   
 <!-- Footer -->
 <footer class="footer">
-  <div class="cont">
-    <div class="row">
+  <div class="conte">
+    <div class="row-fot">
       <div class="links">
         <h5>Quick Links</h5>
         <ul class="list-unstyled">
@@ -674,15 +639,15 @@ p {
   updateCartBadge();
 </script>
 <script>
-  function toggleDropdown() {
-    var dropdown = document.querySelector('.dropdown-menu');
-    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-  }
+document.addEventListener("DOMContentLoaded", function() {
+  var navbarToggler = document.querySelector(".navbar-toggler");
+  var navbarCollapse = document.querySelector(".links-section");
 
-  function toggleNavbar() {
-    var navList = document.querySelector('.nav-list');
-    navList.style.display = navList.style.display === 'block' ? 'none' : 'block';
-  }
+  navbarToggler.addEventListener("click", function() {
+    navbarCollapse.classList.toggle("show");
+  });
+});
+
 </script>
 
 <script src="cartmodal.js"></script>
