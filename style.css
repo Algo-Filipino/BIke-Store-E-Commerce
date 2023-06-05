@@ -168,6 +168,7 @@
     margin-top: 10px;
     width: 100%;
     align-items: center;
+    padding-left: 8rem;
   }
 
   .nav-item {
@@ -180,6 +181,15 @@
   /* Show the hamburger icon only in responsive view */
   .navbar-toggler {
     display: block;
+  }
+  .search-form {
+    margin-top: 10px; /* Add margin-top to create space between the navigation links and search form */
+    justify-content: center; /* Center the search form horizontally */
+  }
+
+  .search-input,
+  .search-button {
+    margin: 5px; /* Adjust margin for the search input and button in responsive view */
   }
 }
 
