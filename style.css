@@ -115,15 +115,17 @@
 }
 /* Hamburger Icon */
 .navbar-toggler {
-  display: none; /* Hide by default */
+  display: none;
   border: none;
   background: transparent;
   cursor: pointer;
   padding: 0;
   width: 40px;
   height: 40px;
-  margin-left: auto;
-  margin-right: 20px; /* Add margin-right for spacing */
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  z-index: 9999;
 }
 
 .navbar-toggler i {
@@ -153,6 +155,7 @@
   .links-section {
     width: 100%;
     display: none;
+    align-items: center;
   }
 
   .navbar-collapse.show {
@@ -164,6 +167,7 @@
     flex-direction: column;
     margin-top: 10px;
     width: 100%;
+    align-items: center;
   }
 
   .nav-item {
@@ -173,13 +177,13 @@
   .right-corner {
     display: none;
   }
-
   /* Show the hamburger icon only in responsive view */
   .navbar-toggler {
     display: block;
   }
 }
-  
+
+ 
   
 
 
@@ -279,7 +283,14 @@
 }
 
 
+.section-title{
+  text-align: center;
+  margin: 1rem;
+}
 
+.shop{
+  margin: 1rem;
+}
 
 .shop-content {
   display: grid;
@@ -545,7 +556,14 @@ span.price {
     color: grey;
   }
 
-
+  @media (max-width: 768px) {
+    .row-fot {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  
 
   
 

@@ -91,7 +91,7 @@
         Total: ₱<span id="cartTotal">0.00</span>
       </div>
       <div>
-        <button id="checkoutButton" class="btn btn-primary" onclick="checkout()">Checkout</button>
+        <button id="checkoutButton" class="btn btn-primary" onclick="checkout()" style="background-color: black;">Checkout</button>
                  
       </div>
     </div>
@@ -122,7 +122,7 @@
           cartItem.classList.add('cart-item');
           cartItem.innerHTML = `
             <div class="cart-item-action">
-              <button class="btn btn-danger" onclick="removeFromCart('${item.id}')">Remove</button>
+              <button class="btn btn-danger" onclick="removeFromCart('${item.id}')" style="background-color:red;">Remove</button>
             </div>
             <img src="${getImageUrl(item.id)}" alt="Product Image" class="cart-item-image">
             <div class="cart-item-details">

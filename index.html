@@ -89,14 +89,14 @@
 
   <!-- About Us Section -->
   <section id="about-us-section">
-    <div class="container-txt">
+    <div class="container-txt" style="margin: 70px;">
       <div class="row-cont">
         <div class="col-lg-8 offset-lg-2">
-          <h2 class="abt">About Us</h2>
-          <p class="abt-pa"> 
+          <h2 class="abt"style="text-align: center;">About Us</h2>
+          <p class="abt-pa" style="justify-content: center;"> 
             We are not your ordinary bike shop; we are a passionate collective of individuals who are deeply dedicated to all things associated with riding. At Bike Store, we harbor a strong passion for bicycles and firmly embrace the liberating and delightful experiences they bring into people's lives.
           </p>
-          <p class="abt-pa">
+          <p class="abt-pa" style="justify-content: center;">
             Our objective is to deliver a flawless and gratifying purchasing experience for every biking aficionado, regardless of whether you are a well-seasoned cyclist or a beginner. We comprehend the excitement and exploration that accompany biking, ranging from the electrifying rush of descending a mountain trail to the tranquil serenity of a leisurely countryside excursion.
           </p>
         </div>
@@ -638,17 +638,7 @@
   // Call the function to update the cart badge when the page loads
   updateCartBadge();
 </script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  var navbarToggler = document.querySelector(".navbar-toggler");
-  var navbarCollapse = document.querySelector(".links-section");
-
-  navbarToggler.addEventListener("click", function() {
-    navbarCollapse.classList.toggle("show");
-  });
-});
-
-</script>
+<script src="hamburger.js"></script>
 
 <script src="cartmodal.js"></script>
 <script src="search.js"></script>
